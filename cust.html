@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Travel Builder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #333;
+    }
+
+    
+    .hero {
+      background: #f3a3b7;
+      padding: 60px 40px;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    /* LEFT SIDE */
+    .hero-left {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      width: 45%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .hero-left h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .card {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #444;
+      flex-shrink: 0;
+    }
+
+    .card h3 {
+      color: #e60023;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+   
+    .hero-right {
+      position: relative;
+      width: 55%;
+      min-height: 450px;
+    }
+    .hero-right-images{
+         display:flex;
+        align-content:space-evenly;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+   
+
+    .headline {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .person {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      height: 320px;
+      background: #eee;
+      border-radius: 20px;
+    }
+
+    
+    .circle {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #ddd;
+      border: 4px solid #fff;
+    }
+
+    .c1 { top: 20px; right: 50px; }
+    .c2 { top: 140px; right: 0; }
+    .c3 { bottom: 120px; right: 40px; }
+    .c4 { bottom: 40px; left: 40px; }
+    .c5 { top: 140px; left: 0; }
+
+    
+    .features {
+      background: #333;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .features-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 15px;
+      width: 33%;
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .feature h4 {
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #ccc;
+    }
+    .image{
+      width: 80%;
+      margin-left: 100px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-container {
+        flex-direction: column;
+      }
+
+      .hero-left,
+      .hero-right {
+        width: 100%;
+      }
+
+      .features-container {
+        flex-direction: column;
+      }
+
+      .feature {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <section class="hero">
+    <div class="hero-container">
+
+      <div class="hero-left">
+        <h2>We've got something for you no matter what you're thinking</h2>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <div>
+            <h3>I know my destination</h3>
+            <p>
+              Build single city or multicity trips with flights, hotels,
+              activities, airport transfers and pay in 1-click for it all.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <h3>I have a shortlist</h3>
+            <p>
+              Compare trips to find the best value for your time & money.
+              Scan states / regions / countries / continents.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <div>
+            <h3>Inspire Me</h3>
+            <p>
+              Find your next travel destination! Billions of data points
+              pulled-in to find you the most suitable destinations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- <div class="headline">Build your own trips<br>in just 10 minutes!</div> -->
+        <img src="12032025100727755858_html_4w04ztk5sc copy 2.png" class="image">
+
+    </div>
+  </section>
+  <section class="features">
+    <div class="features-container">
+
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <div>
+          <h4>700+ DESTINATIONS</h4>
+          <p>Our expert team handpicked all destinations in this site</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fa-solid fa-tags"></i>
+        </div>
+        <div>
+          <h4>BEST PRICE GUARANTEE</h4>
+          <p>Price match within 48 hours of order confirmation</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div>
+          <h4>TOP NOTCH SUPPORT</h4>
+          <p>We are here to help, before, during, and even after your trip.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

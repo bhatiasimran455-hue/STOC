@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Journey</title>
+
+<style>
+:root {
+  --primary: rgb(106, 92, 255);
+  --dark: rgb(11, 28, 92);
+  --card: rgb(255, 255, 255);
+  --muted: rgb(107, 114, 128);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(11, 28, 92), rgb(18, 45, 143));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 380px;
+  background: var(--dark);
+  color: white;
+  border-radius: 28px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+p {
+  text-align: center;
+  font-size: 13px;
+  opacity: .8;
+  margin-bottom: 16px;
+}
+
+
+.toggle {
+  display: flex;
+  background: rgba(255,255,255,.15);
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle label {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle input:checked + label {
+  background: white;
+  color: #111827;
+}
+
+
+.card {
+  background: var(--card);
+  color: rgb(17, 24, 39);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(229, 231, 235);
+  font-size: 14px;
+}
+
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgb(106, 92, 255), rgb(124, 108, 255));
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+
+.result {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+  <h2>Is my journey covered?</h2>
+  <p>Enter your flight details</p>
+
+  <div class="toggle">
+    <input type="radio" name="trip" id="departure" checked>
+    <label for="departure">Departure</label>
+
+    <input type="radio" name="trip" id="arrival">
+    <label for="arrival">Arrival</label>
+  </div>
+
+  <div class="card">
+
+    <div class="field">
+      <label>Airline</label>
+      <select>
+        <option>American Airlines</option>
+        <option>Air France</option>
+        <option>British Airways</option>
+        <option>KLM</option>
+        <option>SWISS</option>
+        <option>Virgin Atlantic</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>From</label>
+      <select>
+        <option>London Heathrow (LHR)</option>
+        <option>New York JFK</option>
+        <option>Amsterdam Schiphol</option>
+        <option>Zurich Airport</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>To</label>
+      <select>
+        <option>New York JFK</option>
+        <option>London Heathrow (LHR)</option>
+        <option>Amsterdam Schiphol</option>
+        <option>Zurich Airport</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Date</label>
+      <input type="date">
+    </div>
+
+    <div class="field">
+      <label>Number of bags</label>
+      <select>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+
+    <button>Get Price</button>
+
+  </div>
+</div>
+
+</body>
+</html>
